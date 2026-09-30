@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenVidPro — Video, Brand & Web</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0908;--fg:#F2F2F0;--muted:#9a938a;--acc:#FF4A1C;--card:#15140f}
+    body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+    header{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(242,242,240,.08)}
+    .logo{font-weight:800;font-size:20px;letter-spacing:-.02em}
+    .logo span{color:var(--acc)}
+    nav{display:flex;gap:24px}
+    nav a{color:var(--muted);text-decoration:none;font-size:14px;transition:color .2s}
+    nav a:hover{color:var(--fg)}
+    main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px;gap:28px}
+    main h1{font-size:clamp(32px,6vw,56px);font-weight:800;letter-spacing:-.03em;line-height:1.1;max-width:720px}
+    main h1 span{color:var(--acc)}
+    main p{font-size:18px;color:var(--muted);max-width:520px}
+    .services{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:12px}
+    .service{background:var(--card);border:1px solid rgba(242,242,240,.1);border-radius:12px;padding:24px 28px;min-width:160px;text-align:center;transition:border-color .2s,transform .2s}
+    .service:hover{border-color:var(--acc);transform:translateY(-3px)}
+    .service h3{font-size:16px;margin-bottom:6px}
+    .service p{font-size:13px;color:var(--muted)}
+    .install-block{margin-top:20px}
+    .install-btn{display:inline-block;background:var(--acc);color:#0a0a0a;font-weight:700;font-size:15px;padding:14px 32px;border-radius:100px;border:0;cursor:pointer;font-family:inherit;transition:opacity .2s}
+    .install-btn:hover{opacity:.88}
+    footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(242,242,240,.08)}
+    @media(max-width:640px){nav{display:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Gen<span>Vid</span>Pro</div>
+    <nav>
+      <a href="#">Film</a>
+      <a href="#">PWA</a>
+      <a href="#">WhatsApp</a>
+      <a href="#">Site</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Video, a brand, or a whole <span>website</span> — made in one studio.</h1>
+    <p>Tell us what you sell and who buys it. We'll tell you what it costs and how fast it lands.</p>
+    <div class="services">
+      <div class="service"><h3>Film</h3><p>Promo, social, product</p></div>
+      <div class="service"><h3>PWA</h3><p>Installable web app</p></div>
+      <div class="service"><h3>WhatsApp</h3><p>Automation & bots</p></div>
+      <div class="service"><h3>Site</h3><p>Design & build</p></div>
+    </div>
+    <div class="install-block">
+      <button id="gvAppBtn" class="install-btn">Get the app</button>
+    </div>
+  </main>
+  <footer>GenVidPro Studio · genvidpro.com</footer>
+
+  <script src="assistant.js"></script>
+  <script src="push.js"></script>
+</body>
+</html>
